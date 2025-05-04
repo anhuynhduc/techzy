@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Wrapper
     >
-      <Title> TODO APP </Title>
+      <Title>TODO APP with REDUX</Title>
       <Filters />
       <Divider />
       <TodoList />

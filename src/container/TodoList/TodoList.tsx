@@ -24,7 +24,7 @@ export default function TodoList() {
   const [todoName, setTodoName] = useState<string>('');
   const [priority, setPriority] = useState<Priority>('Medium');
   const { form, onReset } = useCreate();
-  const { control, watch } = form;
+  const { control } = form;
 
   const todoList: TodoItem[] = useSelector(todosRemainingSelector);
   const dispatch = useDispatch();

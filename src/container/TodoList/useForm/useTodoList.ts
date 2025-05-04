@@ -15,7 +15,7 @@ const useCreate = () => {
     name: Yup.string().required('Vui lòng nhập tên'),
   });
 
-  const form = useForm<FormValues, any, FormValues>({
+  const form = useForm<FormValues, unknown, FormValues>({
     mode: 'all',
     shouldFocusError: true,
     defaultValues,

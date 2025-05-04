@@ -44,32 +44,32 @@ export class Axios {
     );
   }
 
-  get<T = any, R = AxiosResponse<T>>(
+  get<T = unknown, R = AxiosResponse<T>>(
     url: string,
-    config?: AxiosRequestConfig,
+    config: AxiosRequestConfig,
   ): Promise<R> {
     return this.instance.get(url, config);
   }
 
-  post<T = any, D = any, R = AxiosResponse<T>>(
+  post<T = unknown, D = unknown, R = AxiosResponse<T>>(
     url: string,
-    data?: D,
-    config?: AxiosRequestConfig<D>,
+    data: D,
+    config: AxiosRequestConfig<D>,
   ): Promise<R> {
     return this.instance.post(url, data, config);
   }
 
-  put<T = any, D = any, R = AxiosResponse<T>>(
+  put<T = unknown, D = unknown, R = AxiosResponse<T>>(
     url: string,
-    data?: D,
-    config?: AxiosRequestConfig<D>,
+    data: D,
+    config: AxiosRequestConfig<D>,
   ): Promise<R> {
     return this.instance.put(url, data, config);
   }
 
-  delete<T = any, R = AxiosResponse<T>>(
+  delete<T = unknown, R = AxiosResponse<T>>(
     url: string,
-    config?: AxiosRequestConfig,
+    config: AxiosRequestConfig,
   ): Promise<R> {
     return this.instance.delete(url, config);
   }
