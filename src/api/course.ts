@@ -15,17 +15,17 @@ class Course extends Axios {
   }
 
   createCourse(payload: Payload.CreateCourse) {
-    return this.post(`${endpoint}`, payload);
+    return this.post(`${endpoint}`, payload, {});
   }
 
   updateCourse(payload: Payload.UpdateCourse) {
     const { courseId, ...rest } = payload;
 
-    return this.put(`${endpoint}?${this.endpointId(courseId)}`, rest);
+    return this.put(`${endpoint}?${this.endpointId(courseId)}`, rest, {});
   }
 
   deleteCourse(id: string | number) {
-    return this.delete(`${endpoint}?${this.endpointId(id)}`);
+    return this.delete(`${endpoint}?${this.endpointId(id)}`, {});
   }
 
 }

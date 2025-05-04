@@ -234,9 +234,6 @@ declare namespace Model {
     sampleGameURL: string;
     screenMode: string;
   }
-  //------
-  //PLAY
-  export interface Play extends Project {}
 
   export interface ISlotList {
     id: string;

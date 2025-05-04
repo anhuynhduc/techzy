@@ -13,13 +13,12 @@ type Props<
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = {
   heightInput?: number;
-  onKeyPress?: (event: any) => void;
+  onKeyPress?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+  callbackOnChange?: (value: string) => void;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   controller: UseControllerProps<TFieldValues, TName>;
-  errorCol?: 12 | 24;
   subTitle?: string;
   buttonSubmit?: React.ReactNode;
-  callbackOnChange?: (value: any) => void;
   prefix?: React.ReactNode;
   isError?: boolean;
   label?: string;
@@ -34,7 +33,6 @@ function InputField<
     onKeyPress,
     inputProps,
     controller,
-    errorCol = 24,
     heightInput = 32,
     label,
     subTitle,

@@ -1,7 +1,7 @@
 'use client';
 
-import {ChangeEvent, useState} from 'react';
-import { Col, Row, Input, Typography, Radio, Select, Tag } from 'antd';
+import {useState, ChangeEvent} from 'react';
+import { Col, Row, Input, Typography, Radio, Select, Tag, RadioChangeEvent } from 'antd';
 import { useDispatch } from 'react-redux';
 import {
   priorityFilterChange,
@@ -26,7 +26,7 @@ export default function Filters() {
     dispatch(searchFilterChange(value));
   };
 
-  const handleStatusChange = (e: any) => {
+  const handleStatusChange = (e: RadioChangeEvent) => {
     const value: FilterStatus = e.target.value;
     setFilterStatus(value);
     dispatch(statusFilterChange(value));
