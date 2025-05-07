@@ -67,7 +67,7 @@ export default function Filters() {
         <Typography.Paragraph
           style={{ fontWeight: 'bold', marginBottom: 3, marginTop: 10 }}
         >
-          Filter By Priority
+          Filter By Priorities
         </Typography.Paragraph>
         <Select
           mode="multiple"
